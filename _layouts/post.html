@@ -56,27 +56,7 @@
 </div>
 </div>
 
-<div class="comments {{ page.categories }}_comments_css">
-<div id="disqus_container"> 
-    {% if page.not_comment %}
-    <span class="comment">该文章已关闭评论。</span>
-    {% else %}
-    <a href="#" class="comment" onclick="return false;">点击评论或查看评论。</a>
-    {% endif %}    
-    <div id="disqus_thread"></div>
-</div>
-</div>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#disqus_container .comment').on('click',function(){
-            $(this).html('加载中...');
-    var disqus_shortname = '{{site.author.key}}';
-            var that = this;
-            BYB.includeScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){$(that).remove()});
-        });
-});
-</script>
+{% include duoshuo.html %}
 
 {% include footer.html %}
 
