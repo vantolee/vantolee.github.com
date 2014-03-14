@@ -4,6 +4,11 @@
 <head>
   <title>{{ page.title }}|{{ site.title }}</title>
   {% include header.html %}
+
+
+  <script type="text/javascript" src="/style/jquery-1.7.1.min.js"></script>
+  
+
   <script type="text/javascript">
         var BYB = {};
   </script>
@@ -30,7 +35,12 @@
     }
     return false;
     }
+
+ 
+
+
   </script>
+ 
   <meta content="{{ page.description }}" name="description"/>
   <meta content="{% for tag in page.tags %}{{ tag }},{% endfor %}" name="keywords"/>
   <meta property="og:type" content="article" />
